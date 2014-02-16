@@ -13,6 +13,8 @@
   "author": "christhoma",
   "license": "ISC",
   "dependencies": {
-    "formidable": "~1.0.14"
+    "formidable": "~1.0.14",
+    "logfmt": "~0.21.0",
+    "express": "~3.4.8"
   }
 }
