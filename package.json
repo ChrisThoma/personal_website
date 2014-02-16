@@ -11,5 +11,8 @@
     "omar"
   ],
   "author": "christhoma",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "formidable": "~1.0.14"
+  }
 }
