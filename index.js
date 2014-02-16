@@ -1,16 +1,14 @@
-//statement that grabs the server file from the current directory
-var server = require("./server");
-var router = require("./router");
-var requestHandlers = require("./requestHandlers");
+var express = require("express");
+var logfmt = require("logfmt");
+var app = express();
 
-//this creates a blank object named handle
-var handle = {};
+app.use(logfmt.requestLogger());
 
-handle["/"] = requestHandlers.start;
-handle["/start"] = requestHandlers.start;
-handle["/find"] = requestHandlers.find;
-handle["/upload"] = requestHandlers.upload;
-handle["/show"] = requestHandlers.show;
+app.get('/', function(req, res) {
+  res.send('Omar Mad');
+});
 
-//pass the function route into the server
-server.start(router.route, handle);
+var port = Number(process.env.PORT || 5000);
+app.listen(port, function() {
+  console.log("Listening on " + port);
+});
