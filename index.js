@@ -5,7 +5,7 @@ var app = express();
 app.use(logfmt.requestLogger());
 
 app.get('/', function(req, res) {
-  res.send("                      -     =    .--._
+  res.send('                      -     =    .--._
                 - - ~_=  =~_- = - \`.  \`-.
               ==~_ = =_  ~ -   =  .-\'    \`.
             --=~_ - ~  == - =   .\'      _..:._
@@ -19,7 +19,7 @@ app.get('/', function(req, res) {
            --=~_= = - = ~  .\'--\'\'   .   \`-..__.--.
           jgs--==~ _= - ~-=  =-~_-   \`-..___(  ===;
           --==~_==- =__ ~-=  - -    .\'       \`---\'
-          gotta go fast");
+          gotta go fast');
 });
 
 var port = Number(process.env.PORT || 5000);
