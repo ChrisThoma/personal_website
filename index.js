@@ -5,8 +5,7 @@ var app = express();
 app.use(logfmt.requestLogger());
 
 app.get('/', function(req, res) {
-  res.send('Gotta Go Fast
-  	\n \<Nothing Impossible Go\>');
+  res.send('Gotta Go Fast\n \<Nothing Impossible Go\>');
 });
 
 var port = Number(process.env.PORT || 5000);
