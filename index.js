@@ -1,14 +1,18 @@
-var express = require("express");
-var logfmt = require("logfmt");
+var path = requre('path');
+var express = require('express');
 var app = express();
 
-app.use(logfmt.requestLogger());
+//log requests
+app.use(express.logger('dev'));
 
-app.get('/', function(req, res) {
-  res.send('Gotta Go Fast\n &lt;Nothing Impossible Go\>');
+//serve static files
+app.use(express.static(path.join(__dirname, 'public')));
+
+//route for everything else
+app.get('*', function(req, res){
+	re.send('sup');
 });
 
-var port = Number(process.env.PORT || 5000);
-app.listen(port, function() {
-  console.log("Listening on " + port);
-});
+//fire
+app.listen(3000);
+console.log('listening on port 3000');
