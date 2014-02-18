@@ -10,7 +10,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //route for everything else
 app.get('*', function(req, res){
-	re.send('sup');
+	res.send('sup');
 });
 
 //fire
