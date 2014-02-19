@@ -19,7 +19,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // //route for everything else
 app.get('*', function(req, res){
-	res.send('saurav.ejs');
+	res.render('saurav.ejs');
 });
 
 //fire
