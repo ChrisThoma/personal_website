@@ -16,15 +16,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.get('/books', function(req, res) {
 // 	res.send('A list of books should go here');
 // });
+app.get('/saurav', function(req, res){
+	res.render('saurav.ejs');
+});
+
 
 app.get('*', function(req, res) {
 	res.send('<img src=\"https://scontent-b-lga.xx.fbcdn.net/hphotos-ash4/319534_2085753874721_2145877264_n.jpg\">');
 });
 
-// //route for everything else
-app.get('/saurav', function(req, res){
-	res.render('saurav.ejs');
-});
 
 //fire
 var port = Number(process.env.PORT || 3000);
