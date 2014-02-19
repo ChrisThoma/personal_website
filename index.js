@@ -17,8 +17,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 // 	res.send('A list of books should go here');
 // });
 
+app.get('*', function(req, res) {
+	res.send('<img src=\"https://scontent-b-lga.xx.fbcdn.net/hphotos-ash4/319534_2085753874721_2145877264_n.jpg\">');
+});
+
 // //route for everything else
-app.get('*', function(req, res){
+app.get('/saurav', function(req, res){
 	res.render('saurav.ejs');
 });
 
